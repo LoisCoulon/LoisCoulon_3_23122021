@@ -176,16 +176,30 @@ body{
                     margin: 2px 10px;
                 }
 
-                .far{
+                .heart{
+                    border: none;
                     position: absolute;
                     right: 15px;
-                    top: 35%;
-                    bottom: 50%;
-                    font-size: 22px;
-                }
-                .far:hover{
-                    color: $primary;
-                    font-weight: bold;
+           
+                    .far{
+                        font-size: 22px;
+                    }
+                
+                    .fas{
+                        display: none;
+                        font-size: 22px;
+                        background-image: linear-gradient($primary, $secondary);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                    }
+                    &:hover > .far{
+                        display: none;
+                    }
+                    &:hover > .fas{
+                        display: initial;
+                    }
+                
                 }
             }
 
