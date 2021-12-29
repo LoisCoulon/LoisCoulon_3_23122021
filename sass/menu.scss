@@ -103,6 +103,10 @@ header{
         button{
             @include button;
             margin: 20px 0 60px 0;
+            &:hover{
+                box-shadow: $shadow;
+                background: linear-gradient(#ff86dd, #9b63e0);
+            }
         }
     }
 }
