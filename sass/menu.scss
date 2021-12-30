@@ -12,6 +12,16 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    animation: 1s ease-out 0s 1 slideFromTop;
+}
+
+@keyframes slideFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 header{
@@ -60,6 +70,21 @@ header{
             @include margin;
             .starter{
                @include card-content();
+
+            //Futur bouton d'animation
+
+            //    .check{
+            //     background: $tertiary;
+            //     height: 100%;
+            //     display: flex;
+            //     justify-content: center;
+
+            //         .fas{
+            //             font-size: 26px;
+            //             color: white;
+            //         }
+            //     }
+
             }
         }
         .dishes{

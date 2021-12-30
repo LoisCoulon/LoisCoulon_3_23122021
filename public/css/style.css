@@ -1,3 +1,11 @@
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 header {
   position: relative;
 }
@@ -50,6 +58,7 @@ header a {
   display: flex;
   flex-direction: column;
   position: relative;
+  animation: 1s ease-out 0s 1 slideFromTop;
 }
 .restaurant .menu .dishes {
   margin: 20px;
@@ -63,6 +72,7 @@ header a {
   display: flex;
   flex-direction: column;
   position: relative;
+  animation: 1s ease-out 0s 1 slideFromTop;
 }
 .restaurant .menu .desserts {
   margin: 20px;
@@ -76,6 +86,7 @@ header a {
   display: flex;
   flex-direction: column;
   position: relative;
+  animation: 1s ease-out 0s 1 slideFromTop;
 }
 .restaurant .menu h3 {
   font-weight: 300;
@@ -298,6 +309,10 @@ body .bottom .card .container .heart:hover > .far {
 }
 body .bottom .card .container .heart:hover > .fas {
   display: initial;
+}
+body .bottom .card .container .heart:hover {
+  transition: 500ms;
+  transform: scale(1.1);
 }
 body footer {
   background: #2c2c2c;
