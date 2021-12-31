@@ -53,12 +53,32 @@ header a {
   background-color: white;
   border-radius: 20px;
   margin: 15px 0;
-  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
-  flex-direction: column;
-  position: relative;
   animation: 1s ease-out 0s 1 slideFromTop;
+}
+.restaurant .menu .starters .starter__description {
+  overflow: hidden;
+  padding: 10px;
+}
+.restaurant .menu .starters .starter__price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c2c2c;
+  padding: 10px;
+  align-self: flex-end;
+}
+.restaurant .menu .starters .starter__check {
+  background: #99E2D0;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  justify-self: end;
+  border-radius: 0 20px 20px 0;
+}
+.restaurant .menu .starters .starter__check .fas {
+  font-size: 26px;
+  color: white;
 }
 .restaurant .menu .dishes {
   margin: 20px;
@@ -67,11 +87,8 @@ header a {
   background-color: white;
   border-radius: 20px;
   margin: 15px 0;
-  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
-  flex-direction: column;
-  position: relative;
   animation: 1s ease-out 0s 1 slideFromTop;
 }
 .restaurant .menu .desserts {
@@ -81,11 +98,8 @@ header a {
   background-color: white;
   border-radius: 20px;
   margin: 15px 0;
-  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
-  flex-direction: column;
-  position: relative;
   animation: 1s ease-out 0s 1 slideFromTop;
 }
 .restaurant .menu h3 {
@@ -97,20 +111,18 @@ header a {
 }
 .restaurant .menu h4 {
   margin: 3px;
-  font-size: 18px;
+  font-size: 19px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .restaurant .menu p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   margin: 2px 3px;
-}
-.restaurant .menu span {
-  position: absolute;
-  bottom: 15px;
-  right: 20px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #2c2c2c;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .restaurant .menu button {
   width: 60%;
@@ -309,10 +321,6 @@ body .bottom .card .container .heart:hover > .far {
 }
 body .bottom .card .container .heart:hover > .fas {
   display: initial;
-}
-body .bottom .card .container .heart:hover {
-  transition: 500ms;
-  transform: scale(1.1);
 }
 body footer {
   background: #2c2c2c;

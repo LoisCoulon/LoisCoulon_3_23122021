@@ -7,11 +7,8 @@
     background-color: white;
     border-radius: 20px;
     margin: 15px 0;
-    padding: 10px;
     box-shadow: $shadow;
     display: flex;
-    flex-direction: column;
-    position: relative;
     animation: 1s ease-out 0s 1 slideFromTop;
 }
 
@@ -71,19 +68,33 @@ header{
             .starter{
                @include card-content();
 
-            //Futur bouton d'animation
+               &__description{
+                   overflow: hidden;
+                   padding: 10px;
 
-            //    .check{
-            //     background: $tertiary;
-            //     height: 100%;
-            //     display: flex;
-            //     justify-content: center;
+               }
 
-            //         .fas{
-            //             font-size: 26px;
-            //             color: white;
-            //         }
-            //     }
+                &__price{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $black;
+                    padding: 10px;
+                    align-self: flex-end;
+                }
+
+               &__check{
+                background: $tertiary;
+                display: flex;
+                align-items: center;
+                padding: 10px 20px;
+                justify-self: end;
+                border-radius: 0 20px 20px 0;
+
+                    .fas{
+                        font-size: 26px;
+                        color: white;
+                    }
+                }
 
             }
         }
@@ -109,20 +120,19 @@ header{
         }
         h4{
             margin: 3px;
-            font-size: 18px;
+            font-size: 19px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
         }
         p{
-            font-size: 14px;
+            font-size: 15px;
             font-weight: 400;
             margin: 2px 3px;
-        }
-        span{
-            position: absolute; 
-            bottom: 15px;
-            right: 20px;
-            font-size: 16px;
-            font-weight: 600;
-            color: $black;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
 
         button{
