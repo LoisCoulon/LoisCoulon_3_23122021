@@ -6,6 +6,17 @@
     transform: translateY(0);
   }
 }
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 header {
   position: relative;
 }
@@ -55,11 +66,24 @@ header a {
   margin: 15px 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
+  justify-content: space-between;
   animation: 1s ease-out 0s 1 slideFromTop;
+}
+.restaurant .menu .starters .starter:hover > .starter__check {
+  transform: translateX(0);
+  padding: 10px 20px;
+  opacity: 1;
+}
+.restaurant .menu .starters .starter:hover > .starter__check .fas {
+  animation: rotate 500ms linear;
+}
+.restaurant .menu .starters .starter:hover > .starter__price {
+  transform: translateX(0);
 }
 .restaurant .menu .starters .starter__description {
   overflow: hidden;
   padding: 10px;
+  width: 80%;
 }
 .restaurant .menu .starters .starter__price {
   font-size: 16px;
@@ -67,18 +91,22 @@ header a {
   color: #2c2c2c;
   padding: 10px;
   align-self: flex-end;
+  transition: transform 1s;
 }
 .restaurant .menu .starters .starter__check {
   background: #99E2D0;
   display: flex;
   align-items: center;
-  padding: 10px 20px;
   justify-self: end;
   border-radius: 0 20px 20px 0;
+  transform: translateX(20px);
+  transition: all 1s;
+  opacity: 0;
 }
 .restaurant .menu .starters .starter__check .fas {
   font-size: 26px;
   color: white;
+  transition: rotate 1s;
 }
 .restaurant .menu .dishes {
   margin: 20px;
@@ -89,6 +117,7 @@ header a {
   margin: 15px 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
+  justify-content: space-between;
   animation: 1s ease-out 0s 1 slideFromTop;
 }
 .restaurant .menu .desserts {
@@ -100,6 +129,7 @@ header a {
   margin: 15px 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
+  justify-content: space-between;
   animation: 1s ease-out 0s 1 slideFromTop;
 }
 .restaurant .menu h3 {
