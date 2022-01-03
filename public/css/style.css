@@ -57,10 +57,10 @@ header a {
 .restaurant .menu .title .far {
   font-size: 26px;
 }
-.restaurant .menu .starters {
+.restaurant .menu .menu-category {
   margin: 20px;
 }
-.restaurant .menu .starters .starter {
+.restaurant .menu .menu-category .meal {
   background-color: white;
   border-radius: 20px;
   margin: 15px 0;
@@ -69,23 +69,24 @@ header a {
   justify-content: space-between;
   animation: 1s ease-out 0s 1 slideFromTop;
 }
-.restaurant .menu .starters .starter:hover > .starter__check {
-  transform: translateX(0);
+.restaurant .menu .menu-category .meal:hover > .meal__check {
+  transform: scaleX(1);
   padding: 10px 20px;
   opacity: 1;
+  width: 20%;
 }
-.restaurant .menu .starters .starter:hover > .starter__check .fas {
+.restaurant .menu .menu-category .meal:hover > .meal__check .fas {
   animation: rotate 500ms linear;
 }
-.restaurant .menu .starters .starter:hover > .starter__price {
+.restaurant .menu .menu-category .meal:hover > .meal__price {
   transform: translateX(0);
 }
-.restaurant .menu .starters .starter__description {
+.restaurant .menu .menu-category .meal__description {
   overflow: hidden;
   padding: 10px;
   width: 80%;
 }
-.restaurant .menu .starters .starter__price {
+.restaurant .menu .menu-category .meal__price {
   font-size: 16px;
   font-weight: 600;
   color: #2c2c2c;
@@ -93,44 +94,22 @@ header a {
   align-self: flex-end;
   transition: transform 1s;
 }
-.restaurant .menu .starters .starter__check {
+.restaurant .menu .menu-category .meal__check {
   background: #99E2D0;
   display: flex;
   align-items: center;
   justify-self: end;
   border-radius: 0 20px 20px 0;
-  transform: translateX(20px);
   transition: all 1s;
   opacity: 0;
+  transform: scaleX(0);
+  transform-origin: 100%;
+  width: 0;
 }
-.restaurant .menu .starters .starter__check .fas {
+.restaurant .menu .menu-category .meal__check .fas {
   font-size: 26px;
   color: white;
   transition: rotate 1s;
-}
-.restaurant .menu .dishes {
-  margin: 20px;
-}
-.restaurant .menu .dishes .dish {
-  background-color: white;
-  border-radius: 20px;
-  margin: 15px 0;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  display: flex;
-  justify-content: space-between;
-  animation: 1s ease-out 0s 1 slideFromTop;
-}
-.restaurant .menu .desserts {
-  margin: 20px;
-}
-.restaurant .menu .desserts .dessert {
-  background-color: white;
-  border-radius: 20px;
-  margin: 15px 0;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  display: flex;
-  justify-content: space-between;
-  animation: 1s ease-out 0s 1 slideFromTop;
 }
 .restaurant .menu h3 {
   font-weight: 300;

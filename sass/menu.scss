@@ -76,20 +76,21 @@ header{
                 font-size: 26px;
             }
         }
-        .starters{
+        .menu-category{
             @include margin;
-            .starter{
+            .meal{
                @include card-content();
 
-               &:hover > .starter__check{
-                transform: translateX(0);
-                padding: 10px 20px;
-                opacity: 1;
-                .fas{
-                    animation: rotate 500ms linear;
+               &:hover > .meal__check{
+                    transform: scaleX(1);
+                    padding: 10px 20px;
+                    opacity: 1;
+                    width: 20%;
+                    .fas{
+                        animation: rotate 500ms linear;
+                    }
                 }
-                }
-                &:hover > .starter__price{
+                &:hover > .meal__price{
                     transform: translateX(0);
                 }
           
@@ -111,15 +112,16 @@ header{
                 }
 
                &__check{
-                background: $tertiary;
-                display: flex;
-                align-items: center;
-                justify-self: end;
-                border-radius: 0 20px 20px 0;
-                transform: translateX(20px);
-                transition: all 1s;
-                opacity: 0;
-              
+                    background: $tertiary;
+                    display: flex;
+                    align-items: center;
+                    justify-self: end;
+                    border-radius: 0 20px 20px 0;
+                    transition: all 1s;
+                    opacity: 0;
+                    transform: scaleX(0);
+                    transform-origin: 100%;
+                    width: 0;
 
                     .fas{
                         font-size: 26px;
@@ -128,18 +130,6 @@ header{
                     }
                 }
 
-            }
-        }
-        .dishes{
-            @include margin;
-            .dish{
-                @include card-content();
-            }
-        }
-        .desserts{
-            @include margin;
-            .dessert{
-                @include card-content();
             }
         }
 
