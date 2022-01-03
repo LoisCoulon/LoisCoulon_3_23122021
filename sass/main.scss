@@ -173,26 +173,27 @@ body{
            
                     .far{
                         font-size: 22px;
+                        opacity: 1;
+                        transition: opacity 1s ease-in-out;
+                        position: absolute;
                     }
                 
                     .fas{
-                        display: none;
+                        opacity: 0;                        
                         font-size: 22px;
                         background-image: linear-gradient($primary, $secondary);
                         background-clip: text;
                         -webkit-background-clip: text;
                         color: transparent;
+                        transition: opacity 1s ease-in-out;
                     }
                     &:hover > .far{
-                        display: none;
+                        opacity: 0;
                     }
                     &:hover > .fas{
-                        display: initial;
+                        opacity: 1;                    
                     }
-                    // &:hover{
-                    //     transition: 500ms;
-                    //     transform: scale(1.1);
-                    // }
+                    
                 
                 }
             }
