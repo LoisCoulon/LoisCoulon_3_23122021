@@ -3,6 +3,7 @@ $secondary: #FF79DA;
 $tertiary: #99E2D0;
 $gray: #f3f3f3;
 $black: #2c2c2c;
+$btn-color: $secondary, $primary;
 
 $font: 'Shrikhand', cursive;
 $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -13,10 +14,27 @@ $lightShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     align-self: center;
     color: white;
     font-weight: 500;
-    background: linear-gradient($secondary, $primary);
+    background: linear-gradient($btn-color);
     padding: 15px;
     border-radius: 30px;
     border: none;
     box-shadow: $lightShadow;
     cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+@mixin button-after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 30px;
+    background: linear-gradient(lighten($secondary, 5), lighten($primary, 5));
+    box-shadow: $shadow;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms;    
 }

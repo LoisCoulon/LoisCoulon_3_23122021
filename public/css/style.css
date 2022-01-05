@@ -133,7 +133,7 @@ header a {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.restaurant .menu button {
+.restaurant .menu .btn {
   width: 60%;
   align-self: center;
   color: white;
@@ -144,11 +144,26 @@ header a {
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   margin: 20px 0 60px 0;
 }
-.restaurant .menu button:hover {
+.restaurant .menu .btn:hover::after {
+  opacity: 1;
+}
+.restaurant .menu .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+  background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(#ff86dd, #9b63e0);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 
 * {
@@ -239,7 +254,7 @@ body .top p {
   color: #474747;
   margin: 0 20px 20px 20px;
 }
-body .top button {
+body .top .btn {
   width: 60%;
   align-self: center;
   color: white;
@@ -250,11 +265,26 @@ body .top button {
   border: none;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   cursor: pointer;
+  position: relative;
+  z-index: 1;
   margin-bottom: 40px;
 }
-body .top button:hover {
+body .top .btn:hover::after {
+  opacity: 1;
+}
+body .top .btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-radius: 30px;
+  background: linear-gradient(#ff93e1, #a16be0);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(#ff86dd, #9b63e0);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 250ms;
 }
 body .middle {
   animation: opacity 2.5s linear both;

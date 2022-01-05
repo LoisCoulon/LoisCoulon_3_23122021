@@ -157,13 +157,17 @@ header{
             overflow: hidden;
         }
 
-        button{
+        .btn{
             @include button;
             margin: 20px 0 60px 0;
             &:hover{
-                box-shadow: $shadow;
-                background: linear-gradient(#ff86dd, #9b63e0);
+                &::after{
+                 opacity: 1;
+                }
             }
+             &::after{
+                @include button-after;
+             }
         }
     }
 }

@@ -104,13 +104,18 @@ body{
             color: #474747;
             margin:  0 20px 20px 20px;
         }
-        button{
+        .btn{
            @include button;
            margin-bottom: 40px;
+           
            &:hover{
-               box-shadow: $shadow;
-               background: linear-gradient(#ff86dd, #9b63e0);
+               &::after{
+                opacity: 1;
+               }
            }
+            &::after{
+               @include button-after;
+            }
         }
     }
 
