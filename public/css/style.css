@@ -236,7 +236,7 @@ body header img {
 }
 body .spin::before {
   padding: 20px;
-  animation: 2s linear spinner both;
+  animation: 1.2s linear spinner both;
   border: solid 6px #cfd0d1;
   border-bottom-color: #9356DC;
   border-radius: 50%;
@@ -250,7 +250,7 @@ body .spin::before {
   will-change: transform;
 }
 body .top {
-  animation: opacity 2.5s linear both;
+  animation: opacity 2s linear both;
   background: #f3f3f3;
   border-top: 2px solid #c4c4c4;
   display: flex;
@@ -312,7 +312,7 @@ body .top .btn::after {
   transition: opacity 250ms;
 }
 body .middle {
-  animation: opacity 2.5s linear both;
+  animation: opacity 2s linear both;
   display: flex;
   flex-direction: column;
   padding: 20px 0 50px 0;
@@ -357,7 +357,7 @@ body .middle .first:hover > .fas, body .middle .third:hover > .fas, body .middle
   color: #9356DC;
 }
 body .bottom {
-  animation: opacity 2.5s linear both;
+  animation: opacity 2s linear both;
   padding: 30px 0;
   background: #f3f3f3;
   display: flex;
