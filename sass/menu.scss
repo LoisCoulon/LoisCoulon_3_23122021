@@ -10,16 +10,24 @@
     box-shadow: $shadow;
     display: flex;
     justify-content: space-between;
-    animation: 1s ease-out 0s 1 slideFromTop;
+    animation: $anim-dur slideFromBottom both;
     overflow: hidden;
+
+    @for $i from 1 through $num-meal {
+        &--#{$i} {
+            animation-delay: $anim-delay * $i;
+        }
+    }
 }
 
-@keyframes slideFromTop {
+@keyframes slideFromBottom {
     0% {
-        transform: translateY(-100%);
+        transform: translateY(50%);
+        opacity: 0;
     }
     100% {
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
@@ -105,7 +113,7 @@ header{
                     transition: transform 1s;
                 }
 
-               &__check{
+                &__check{
                     background: $tertiary;
                     display: flex;
                     align-items: center;

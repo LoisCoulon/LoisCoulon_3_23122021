@@ -1,9 +1,11 @@
-@keyframes slideFromTop {
+@keyframes slideFromBottom {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(50%);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 @keyframes rotate {
@@ -67,30 +69,55 @@ header a {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
   justify-content: space-between;
-  animation: 1s ease-out 0s 1 slideFromTop;
+  animation: 1000ms slideFromBottom both;
+  overflow: hidden;
+}
+.restaurant .menu .menu-category .meal--1 {
+  animation-delay: 100ms;
+}
+.restaurant .menu .menu-category .meal--2 {
+  animation-delay: 200ms;
+}
+.restaurant .menu .menu-category .meal--3 {
+  animation-delay: 300ms;
+}
+.restaurant .menu .menu-category .meal--4 {
+  animation-delay: 400ms;
+}
+.restaurant .menu .menu-category .meal--5 {
+  animation-delay: 500ms;
+}
+.restaurant .menu .menu-category .meal--6 {
+  animation-delay: 600ms;
+}
+.restaurant .menu .menu-category .meal--7 {
+  animation-delay: 700ms;
+}
+.restaurant .menu .menu-category .meal--8 {
+  animation-delay: 800ms;
+}
+.restaurant .menu .menu-category .meal--9 {
+  animation-delay: 900ms;
+}
+.restaurant .menu .menu-category .meal--10 {
+  animation-delay: 1000ms;
 }
 .restaurant .menu .menu-category .meal:hover > .meal__check {
-  transform: scaleX(1);
-  padding: 10px 20px;
-  opacity: 1;
-  width: 70px;
+  margin-right: 0;
 }
 .restaurant .menu .menu-category .meal:hover > .meal__check .fas {
-  animation: rotate 500ms both linear 200ms;
-}
-.restaurant .menu .menu-category .meal:hover > .meal__price {
-  transform: translateX(0);
+  animation: rotate 350ms both linear 150ms;
 }
 .restaurant .menu .menu-category .meal__description {
   overflow: hidden;
-  padding: 10px;
-  width: 80%;
+  padding: 10px 0 10px 10px;
+  width: 82%;
 }
 .restaurant .menu .menu-category .meal__price {
   font-size: 16px;
   font-weight: 600;
   color: #2c2c2c;
-  padding: 10px;
+  margin: 12px 12px 12px 5px;
   align-self: flex-end;
   transition: transform 1s;
 }
@@ -100,16 +127,14 @@ header a {
   align-items: center;
   justify-self: end;
   border-radius: 0 20px 20px 0;
-  transition: all 1s;
-  opacity: 0;
-  transform: scaleX(0);
+  transition: margin-right 600ms;
   transform-origin: 100%;
-  width: 0;
+  padding: 20px;
+  margin-right: -70px;
 }
 .restaurant .menu .menu-category .meal__check .fas {
   font-size: 26px;
   color: white;
-  transition: rotate 1s;
 }
 .restaurant .menu h3 {
   font-weight: 300;
@@ -119,7 +144,7 @@ header a {
   margin-bottom: 10px;
 }
 .restaurant .menu h4 {
-  margin: 3px;
+  margin: 3px 0 3px 3px;
   font-size: 19px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -128,7 +153,7 @@ header a {
 .restaurant .menu p {
   font-size: 15px;
   font-weight: 400;
-  margin: 2px 3px;
+  margin: 2px 0 2px 3px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -389,6 +414,7 @@ body .bottom .card .container .heart {
   border: none;
   position: absolute;
   right: 15px;
+  background-color: #f3f3f3;
 }
 body .bottom .card .container .heart .far {
   font-size: 22px;

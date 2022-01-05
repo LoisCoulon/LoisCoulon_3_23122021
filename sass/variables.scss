@@ -9,6 +9,10 @@ $font: 'Shrikhand', cursive;
 $shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 $lightShadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
+$num-meal: 10;
+$anim-dur: 1000ms;
+$anim-delay: $anim-dur / $num-meal;
+
 @mixin button {
     width: 60%;
     align-self: center;
