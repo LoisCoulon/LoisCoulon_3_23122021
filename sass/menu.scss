@@ -11,6 +11,7 @@
     display: flex;
     justify-content: space-between;
     animation: 1s ease-out 0s 1 slideFromTop;
+    overflow: hidden;
 }
 
 @keyframes slideFromTop {
@@ -82,23 +83,16 @@ header{
                @include card-content();
 
                 &:hover > .meal__check{
-                    transform: scaleX(1);
-                    padding: 10px 20px;
-                    opacity: 1;
-                    width: 70px;
+                    margin-right: 0;
                     .fas{
-                        animation: rotate 500ms both linear 200ms;
+                        animation: rotate 350ms both linear 150ms;
                     }
-                }
-                &:hover > .meal__price{
-                    transform: translateX(0);
-                }
-          
+                }          
 
                &__description{
                    overflow: hidden;
-                   padding: 10px;
-                   width: 80%;
+                   padding: 10px 0 10px 10px;
+                   width: 82%;
 
                }
 
@@ -106,7 +100,7 @@ header{
                     font-size: 16px;
                     font-weight: 600;
                     color: $black;
-                    padding: 10px;
+                    margin: 12px 12px 12px 5px;
                     align-self: flex-end;
                     transition: transform 1s;
                 }
@@ -117,16 +111,14 @@ header{
                     align-items: center;
                     justify-self: end;
                     border-radius: 0 20px 20px 0;
-                    transition: all 1s;
-                    opacity: 0;
-                    transform: scaleX(0);
+                    transition: margin-right 600ms;
                     transform-origin: 100%;
-                    width: 0;
+                    padding: 20px;
+                    margin-right: -70px;
 
                     .fas{
                         font-size: 26px;
                         color: white;
-                        transition: rotate 1s;
                     }
                 }
 
@@ -141,7 +133,7 @@ header{
             margin-bottom: 10px;
         }
         h4{
-            margin: 3px;
+            margin: 3px 0 3px 3px;
             font-size: 19px;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -151,7 +143,7 @@ header{
         p{
             font-size: 15px;
             font-weight: 400;
-            margin: 2px 3px;
+            margin: 2px 0 2px 3px;
             white-space: nowrap;
             text-overflow: ellipsis;
             overflow: hidden;
