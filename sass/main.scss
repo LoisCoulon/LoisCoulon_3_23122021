@@ -237,24 +237,24 @@ body{
                     .far{
                         font-size: 22px;
                         opacity: 1;
-                        transition: opacity 1s ease-in-out;
+                        transition: opacity 1s 200ms ease-in-out;
                         position: absolute;
                     }
                 
                     .fas{
-                        opacity: 0;                        
                         font-size: 22px;
                         background-image: linear-gradient($primary, $secondary);
                         background-clip: text;
                         -webkit-background-clip: text;
                         color: transparent;
-                        transition: opacity 1s ease-in-out;
+                        transition: all 1s ease-in-out;
+                        transform: translate(0.2px, 6px) scale(0);
                     }
                     &:hover > .far{
                         opacity: 0;
                     }
                     &:hover > .fas{
-                        opacity: 1;                    
+                        transform: translate(0.5px, 0) scale(1);              
                     }
                     
                 
