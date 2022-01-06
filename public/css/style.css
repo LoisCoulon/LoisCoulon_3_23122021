@@ -169,7 +169,7 @@ header a {
 }
 .restaurant .menu h4 {
   margin: 3px 0 3px 3px;
-  font-size: 19px;
+  font-size: 18px;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -453,13 +453,13 @@ body .bottom .card .container .heart .fas {
   -webkit-background-clip: text;
   color: transparent;
   transition: all 1s ease-in-out;
-  transform: translate(0.2px, 6px) scale(0);
+  transform: translate(0.4px, 6px) scale(0);
 }
 body .bottom .card .container .heart:hover > .far {
   opacity: 0;
 }
 body .bottom .card .container .heart:hover > .fas {
-  transform: translate(0.5px, 0) scale(1);
+  transform: translate(0.4px, 0) scale(1);
 }
 body footer {
   background: #2c2c2c;
