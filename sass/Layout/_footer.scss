@@ -1,0 +1,39 @@
+footer {
+    background: #2c2c2c;
+
+    h2 {
+        font-family: $font-2;
+        color: white;
+        font-weight: 500;
+        padding: 22px 0 20px 22px;
+        font-size: 19px;
+    }
+
+    ul {
+        padding: 0 0 20px 20px;
+        list-style: none;
+
+        li {
+            margin-bottom: 8px;
+
+            .fas {
+                color: white;
+                font-size: 13px;
+                margin-left: 3px;
+                width: 15px;
+            }
+
+            .hand {
+                transform: rotate(-15deg);
+                // margin-right: -4px;
+                // margin-left: 3px;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                margin-left: 5px;
+            }
+        }
+    }
+}

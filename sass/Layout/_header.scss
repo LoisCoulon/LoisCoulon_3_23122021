@@ -1,0 +1,18 @@
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+
+    .back-arrow{
+        font-size: 22px;
+        position: absolute;
+        left: 20px;
+        top: 18px;
+        color: $black;
+    }
+
+    img {
+        width: 200px;
+    }
+}
