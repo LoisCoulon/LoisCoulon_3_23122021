@@ -81,8 +81,34 @@ header{
                 font-size: 26px;
                 font-weight: 500;
             }
-            .far{
-                font-size: 26px;
+            .heart{
+                border: none;
+                position: absolute;
+                right: 15px;
+                background-color: $gray;
+       
+                .far{
+                    font-size: 26px;
+                    opacity: 1;
+                    transition: opacity 1s 200ms ease-in-out;
+                    position: absolute;
+                }
+            
+                .fas{
+                    font-size: 26px;
+                    background-image: linear-gradient($primary, $secondary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    transition: all 1s ease-in-out;
+                    transform: translateY(8px) scale(0);
+                }
+                &:hover > .far{
+                    opacity: 0;
+                }
+                &:hover > .fas{
+                    transform: translateY(0) scale(1);              
+                }
             }
         }
         .menu-category{
