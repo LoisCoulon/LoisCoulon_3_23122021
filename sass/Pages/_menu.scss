@@ -161,20 +161,27 @@
         flex-direction: column;
         align-items: center;
         background-size: 500%;
-        background-image: linear-gradient(45deg, $primary, $secondary , $tertiary );
-        animation: bg-animation 5s infinite alternate-reverse;
+        background-image: linear-gradient(45deg, $tertiary, $secondary , $tertiary );
+        animation: bg-animation 5s infinite alternate-reverse linear;
+
+        img{
+            width: 70%;
+            border-radius: 30px;
+            margin-top: 20px;
+        }
 
         .menu{
-            width: 65%;
+            width: 70%;
             border-radius: 30px;
             margin-bottom: 30px;
 
             &__title{
+                margin: 30px 30px 15px 25px;
                 h2{
                     font-size: 30px;
                 }
                 .heart{
-                    margin-right: 5px;
+                    right: 30px;
                     .fas{
                         font-size: 30px;
                     }
@@ -185,9 +192,13 @@
             }
 
             &__category{
+
+                margin: 20px 40px;
+
                 h3{
                     font-size: 26px;
                 }
+
                 .meal{
                     
                     h4{
@@ -202,8 +213,8 @@
                     }
                 }
                 
-                
             }
+
             .btn{
                 font-size: 24px;
             }
@@ -215,5 +226,20 @@
 
 //Style pour la version desktop
 @media screen and (min-width: 992px) {
+
+    .restaurant{
+        img{
+            width: 60%;
+            
+        }
+        .menu{
+            width: 60%;
     
+            &__category{
+                margin: 20px 80px;
+            }
+        }
+
+    }
+   
 }

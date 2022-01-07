@@ -122,6 +122,7 @@ footer ul li a {
 @media screen and (min-width: 768px) {
   footer h2 {
     font-size: 26px;
+    text-align: center;
   }
   footer ul {
     display: flex;
@@ -410,6 +411,45 @@ body .bottom__card__container .heart:hover > .fas {
     font-size: 28px;
   }
 }
+@media screen and (min-width: 992px) {
+  .middle {
+    margin: 0 20px;
+  }
+}
+@media screen and (min-width: 1304px) {
+  .home {
+    background-size: 500%;
+    background-image: linear-gradient(45deg, #9356DC, #FF79DA, #99E2D0);
+    animation: bg-animation 5s infinite alternate-reverse;
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .home .top {
+    width: 48%;
+    border-radius: 30px;
+    justify-content: space-between;
+    margin-right: 10px;
+  }
+  .home .top__position {
+    border-radius: 30px 30px 0 0;
+  }
+  .home .middle {
+    border-radius: 30px;
+    width: 48%;
+    min-width: 600px;
+    background-color: white;
+    padding: 5px 0;
+    margin-left: 10px;
+  }
+  .home .bottom {
+    margin: 20px;
+    width: 50%;
+    border-radius: 30px;
+    padding: 5px;
+  }
+}
 .restaurant img {
   width: 100%;
   height: 280px;
@@ -601,25 +641,36 @@ body .bottom__card__container .heart:hover > .fas {
     flex-direction: column;
     align-items: center;
     background-size: 500%;
-    background-image: linear-gradient(45deg, #9356DC, #FF79DA, #99E2D0);
-    animation: bg-animation 5s infinite alternate-reverse;
+    background-image: linear-gradient(45deg, #99E2D0, #FF79DA, #99E2D0);
+    animation: bg-animation 5s infinite alternate-reverse linear;
+  }
+  .restaurant img {
+    width: 70%;
+    border-radius: 30px;
+    margin-top: 20px;
   }
   .restaurant .menu {
-    width: 65%;
+    width: 70%;
     border-radius: 30px;
     margin-bottom: 30px;
+  }
+  .restaurant .menu__title {
+    margin: 30px 30px 15px 25px;
   }
   .restaurant .menu__title h2 {
     font-size: 30px;
   }
   .restaurant .menu__title .heart {
-    margin-right: 5px;
+    right: 30px;
   }
   .restaurant .menu__title .heart .fas {
     font-size: 30px;
   }
   .restaurant .menu__title .heart .far {
     font-size: 30px;
+  }
+  .restaurant .menu__category {
+    margin: 20px 40px;
   }
   .restaurant .menu__category h3 {
     font-size: 26px;
@@ -635,6 +686,17 @@ body .bottom__card__container .heart:hover > .fas {
   }
   .restaurant .menu .btn {
     font-size: 24px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant img {
+    width: 60%;
+  }
+  .restaurant .menu {
+    width: 60%;
+  }
+  .restaurant .menu__category {
+    margin: 20px 80px;
   }
 }
 

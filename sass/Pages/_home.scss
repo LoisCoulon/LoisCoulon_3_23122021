@@ -313,8 +313,66 @@ body{
 }
 
 }
+@media screen and (min-width: 992px) {
+
+    .middle{
+        margin: 0 20px;
+    }
+
+}
 
 //Style pour la version desktop
-@media screen and (min-width: 992px) {
-    
+@media screen and (min-width: 1304px) {
+    .home{
+
+        background-size: 500%;
+        background-image: linear-gradient(45deg, $primary, $secondary , $tertiary );
+        animation: bg-animation 5s infinite alternate-reverse;
+        display: flex;
+        // align-items: center;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .top{
+            width: 48%;
+            border-radius: 30px;
+            justify-content: space-between;
+            margin-right: 10px;
+            &__position{
+                border-radius: 30px 30px 0 0;
+            }
+        } 
+        .middle{
+            border-radius: 30px;
+            width: 48%;
+            min-width: 600px;
+            background-color: white;
+            padding: 5px 0;
+            margin-left: 10px;
+        }
+        .bottom{
+            margin: 20px;
+            width: 50%;
+            border-radius: 30px;
+            padding: 5px;
+        }
+        // .bottom{
+        //     margin: 20px;
+        //     // width: 50%;
+        //     flex-wrap: nowrap;
+        //     border-radius: 30px;
+        //     position: relative;
+        //     width: 100%;
+        //     &__card{
+        //         margin: 40px 10px 10px 10px;
+        //     }
+
+        //     h2{
+        //         position: absolute;
+        //         top: 10px;
+        //         left: 10px;
+        //     }
+        // }
+    }
 }
