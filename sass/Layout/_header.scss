@@ -16,3 +16,20 @@ header {
         width: 200px;
     }
 }
+
+//Style pour la version tablette
+@media screen and (min-width: 768px) {
+    header{
+        img{
+            width: 300px;
+        }
+        .back-arrow{
+            font-size: 32px;
+        }
+    }
+}
+
+//Style pour la version desktop
+@media screen and (min-width: 992px) {
+    
+}

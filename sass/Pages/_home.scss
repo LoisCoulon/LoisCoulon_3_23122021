@@ -77,7 +77,7 @@ body {
             margin: 20px 0 20px 20px;
         }
 
-        &__first {
+        &__rule {
             margin: 10px 0;
             padding: 5px 0;
             display: flex;
@@ -117,16 +117,6 @@ body {
                 color: $primary;
             }
 
-        }
-
-       
-
-        &__second {
-            @extend .middle__first;
-        }
-
-        &__third {
-            @extend .middle__first;
         }
 
     }
@@ -227,4 +217,104 @@ body {
 
         }
     }
+}
+
+//Style pour la version tablette
+@media screen and (min-width: 768px) {
+    
+body{
+    .top{
+        &__position {
+
+            .fas{
+                font-size: 24px;
+            }
+            h3{
+                font-size: 24px;
+            }
+        }
+        h2{
+            font-size: 26px;
+        }
+        p{
+            font-size: 20px;
+        }
+        .btn{
+            font-size: 20px;
+            width: initial;
+            padding: 20px;
+        }
+    }
+    .middle{
+
+        h2{
+            font-size: 26px;
+        }
+
+        &__rule{
+            width: 50%;
+
+            &--first{
+                align-self: flex-start;
+                margin-left: 30px;
+            }
+            &--third{
+                align-self: flex-end;
+                margin-right: 20px;
+            }
+            p{
+                font-size: 20px;
+            }
+            .fas{
+                font-size: 22px;
+            }
+            span{
+                font-size: 20px;
+            }
+        }    
+    }
+
+    .bottom{
+        flex-direction: initial;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        padding: 30px 5px;
+
+        h2{
+            width: 100%;
+            font-size: 26px;
+        }
+        &__card{
+            width: 47%;
+            margin: 10px 5px;
+
+            span{
+                font-size: 20px;
+            }
+
+            &__container{
+                h3{
+                    font-size: 24px;
+                }
+                p{
+                    font-size: 20px;
+                }
+            }
+            .heart{
+                .fas{
+                    font-size: 28px;
+                }
+                .far{
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+}
+
+//Style pour la version desktop
+@media screen and (min-width: 992px) {
+    
 }
