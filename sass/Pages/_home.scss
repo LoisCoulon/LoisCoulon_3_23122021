@@ -202,20 +202,17 @@ body {
                     -webkit-background-clip: text;
                     color: transparent;
                     transition: all 1s ease-in-out;
-                    transform: translate(0.4px, 6px) scale(0);
+                    transform: translateY(8px) scale(0);
                 }
 
-                &:hover>.far {
+                .far:hover {
                     opacity: 0;
-                }
 
-                &:hover>.fas {
-                    transform: translate(0.4px, 0) scale(1);
-                }
-
+                    & + .fas {
+                        transform: translateY(0) scale(1);
+                    }
+                }               
             }
-
-
         }
     }
 }

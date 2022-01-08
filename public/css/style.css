@@ -329,13 +329,13 @@ body .bottom__card__container .fas {
   -webkit-background-clip: text;
   color: transparent;
   transition: all 1s ease-in-out;
-  transform: translate(0.4px, 6px) scale(0);
+  transform: translateY(8px) scale(0);
 }
-body .bottom__card__container:hover > .far {
+body .bottom__card__container .far:hover {
   opacity: 0;
 }
-body .bottom__card__container:hover > .fas {
-  transform: translate(0.4px, 0) scale(1);
+body .bottom__card__container .far:hover + .fas {
+  transform: translateY(0) scale(1);
 }
 
 @media screen and (min-width: 768px) {
