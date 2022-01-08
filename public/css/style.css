@@ -254,6 +254,7 @@ body .middle__rule p {
 }
 body .middle__rule:hover {
   background-color: #9256dc23;
+  cursor: pointer;
 }
 body .middle__rule:hover > .fas {
   color: #9356DC;
@@ -547,7 +548,7 @@ body .bottom__card__container .heart:hover > .fas {
   animation-delay: 1000ms;
 }
 .restaurant .menu__category .meal:hover > .meal__check {
-  transform: translateX(0);
+  margin-right: 0;
 }
 .restaurant .menu__category .meal:hover > .meal__check .fas {
   animation: rotate 350ms both linear 150ms;
@@ -571,10 +572,10 @@ body .bottom__card__container .heart:hover > .fas {
   align-items: center;
   justify-self: end;
   border-radius: 0 20px 20px 0;
-  transition: transform 600ms;
+  transition: margin-right 600ms;
   transform-origin: 100%;
   padding: 20px;
-  transform: translateX(70px);
+  margin-right: -70px;
 }
 .restaurant .menu__category .meal__check .fas {
   font-size: 26px;
@@ -641,7 +642,7 @@ body .bottom__card__container .heart:hover > .fas {
     flex-direction: column;
     align-items: center;
     background-size: 500%;
-    background-image: linear-gradient(45deg, #FF79DA, #99E2D0);
+    background-image: linear-gradient(45deg, #99E2D0, #FF79DA, #99E2D0);
     animation: bg-animation 5s infinite alternate-reverse linear;
   }
   .restaurant img {
