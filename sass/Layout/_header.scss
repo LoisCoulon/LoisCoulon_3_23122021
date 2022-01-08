@@ -1,0 +1,35 @@
+header {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    position: relative;
+
+    .back-arrow{
+        font-size: 22px;
+        position: absolute;
+        left: 20px;
+        top: 18px;
+        color: $black;
+    }
+
+    img {
+        width: 200px;
+    }
+}
+
+//Style pour la version tablette
+@media screen and (min-width: 768px) {
+    header{
+        img{
+            width: 300px;
+        }
+        .back-arrow{
+            font-size: 32px;
+        }
+    }
+}
+
+//Style pour la version desktop
+@media screen and (min-width: 992px) {
+    
+}

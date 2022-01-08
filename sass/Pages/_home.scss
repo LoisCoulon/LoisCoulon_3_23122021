@@ -1,0 +1,376 @@
+body {
+
+    .spin::before {
+        padding: 20px;
+        animation: 1.2s linear spinner both;
+        border: solid 6px #cfd0d1;
+        border-bottom-color: $primary;
+        border-radius: 50%;
+        content: "";
+        height: 80px;
+        width: 80px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        will-change: transform;
+    }
+
+    .top {
+        animation: opacity 2s linear both;
+        background: $gray;
+        border-top: 2px solid #c4c4c4;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        &__position {
+            background: #dfdada;
+            display: flex;
+            justify-content: center;
+            padding: 5px 0;
+
+            h3 {
+                margin: 8px;
+                font-size: 16px;
+                color: $black;
+            }
+
+            .fas {
+                margin: 8px;
+                color: $black;
+            }
+        }
+
+        h2 {
+            margin: 30px 35px 15px 35px;
+        }
+
+        p {
+            color: #474747;
+            margin: 0 20px 20px 20px;
+        }
+
+        .btn {
+            @include button;
+            margin-bottom: 40px;
+
+            &:hover {
+                &::after {
+                    opacity: 1;
+                }
+            }
+
+            &::after {
+                @include button-after;
+            }
+        }
+    }
+
+    .middle {
+        animation: opacity 2s linear both;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 50px 0;
+
+        h2 {
+            margin: 20px 0 20px 20px;
+        }
+
+        &__rule {
+            margin: 10px 0;
+            padding: 5px 0;
+            display: flex;
+            background: $gray;
+            width: 90%;
+            align-self: center;
+            border-radius: 20px;
+            padding: 20px 0;
+            box-shadow: $shadow;
+
+            span {
+                color: white;
+                background-color: #9356DC;
+                border-radius: 100%;
+                padding: 3px 7px;
+                font-size: 14px;
+                margin-left: -3%;
+            }
+
+            .fas {
+                color: #757575;
+                margin: 0 20px;
+                font-size: 18px;
+                align-self: center;
+                width: 20px;
+            }
+
+            p {
+                font-weight: 600;
+                align-self: center;
+            }
+
+            &:hover {
+                background-color: #9256dc23;
+                cursor: pointer;
+            }
+
+            &:hover>.fas {
+                color: $primary;
+            }
+
+        }
+
+    }
+
+    .bottom {
+        animation: opacity 2s linear both;
+        padding: 30px 0;
+        background: $gray;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            align-self: flex-start;
+            margin: 15px 0 10px 18px;
+        }
+
+        &__card {
+            width: 90%;
+            height: 250px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            position: relative;
+
+            span {
+                position: absolute;
+                padding: 5px 8px;
+                background-color: $tertiary;
+                color: #209577;
+                font-weight: 500;
+                border-radius: 2px;
+                top: 10px;
+                right: 10px;
+                font-size: 15px;
+            }
+
+            img {
+                width: 100%;
+                height: 70%;
+                object-fit: cover;
+                border-radius: 10px 10px 0 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: $black;
+            }
+
+            &__container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                height: 28%;
+
+                h3 {
+                    margin: 2px 10px;
+                }
+
+                p {
+                    margin: 2px 10px;
+                }
+
+
+
+                .far {
+                    right: 15px;
+                    font-size: 22px;
+                    opacity: 1;
+                    transition: opacity 1s 200ms ease-in-out;
+                    position: absolute;
+                }
+
+                .fas {
+                    position: absolute;
+                    right: 15px;
+                    font-size: 22px;
+                    background-image: linear-gradient($primary, $secondary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    transition: all 1s ease-in-out;
+                    transform: translateY(8px) scale(0);
+                }
+
+                .far:hover {
+                    opacity: 0;
+
+                    & + .fas {
+                        transform: translateY(0) scale(1);
+                    }
+                }               
+            }
+        }
+    }
+}
+
+//Style pour la version tablette
+@media screen and (min-width: 768px) {
+
+    body {
+        .top {
+            &__position {
+
+                .fas {
+                    font-size: 24px;
+                }
+
+                h3 {
+                    font-size: 24px;
+                }
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .btn {
+                font-size: 20px;
+                width: initial;
+                padding: 20px;
+            }
+        }
+
+        .middle {
+
+            h2 {
+                font-size: 26px;
+            }
+
+            &__rule {
+                width: 50%;
+
+                &--first {
+                    align-self: flex-start;
+                    margin-left: 30px;
+                }
+
+                &--third {
+                    align-self: flex-end;
+                    margin-right: 20px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                .fas {
+                    font-size: 22px;
+                }
+
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .bottom {
+            flex-direction: initial;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px 5px;
+
+            h2 {
+                width: 100%;
+                font-size: 26px;
+            }
+
+            &__card {
+                width: 47%;
+                margin: 10px 5px;
+
+                span {
+                    font-size: 20px;
+                }
+
+                &__container {
+                    h3 {
+                        font-size: 24px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                .fas {
+                    font-size: 28px;
+                }
+
+                .far {
+                    font-size: 28px;
+                }
+
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    .middle {
+        margin: 0 20px;
+    }
+
+}
+
+//Style pour la version desktop
+@media screen and (min-width: 1304px) {
+    .home {
+
+        background-size: 500%;
+        background-image: linear-gradient(45deg, $secondary, $tertiary);
+        animation: bg-animation 5s infinite alternate-reverse;
+        display: flex;
+        // align-items: center;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .top {
+            width: 48%;
+            border-radius: 30px;
+            justify-content: space-between;
+            margin-right: 10px;
+
+            &__position {
+                border-radius: 30px 30px 0 0;
+            }
+        }
+
+        .middle {
+            border-radius: 30px;
+            width: 48%;
+            min-width: 600px;
+            background-color: white;
+            padding: 5px 0;
+            margin-left: 10px;
+        }
+
+        .bottom {
+            margin: 20px;
+            width: 50%;
+            border-radius: 30px;
+            padding: 5px;
+        }
+
+    }
+}
