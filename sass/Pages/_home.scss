@@ -109,11 +109,12 @@ body {
                 font-weight: 600;
                 align-self: center;
             }
+
             &:hover {
                 background-color: #9256dc23;
                 cursor: pointer;
             }
-    
+
             &:hover>.fas {
                 color: $primary;
             }
@@ -182,39 +183,38 @@ body {
                     margin: 2px 10px;
                 }
 
-                .heart {
-                    border: none;
+
+
+                .far {
+                    right: 15px;
+                    font-size: 22px;
+                    opacity: 1;
+                    transition: opacity 1s 200ms ease-in-out;
+                    position: absolute;
+                }
+
+                .fas {
                     position: absolute;
                     right: 15px;
-                    background-color: $gray;
-
-                    .far {
-                        font-size: 22px;
-                        opacity: 1;
-                        transition: opacity 1s 200ms ease-in-out;
-                        position: absolute;
-                    }
-
-                    .fas {
-                        font-size: 22px;
-                        background-image: linear-gradient($primary, $secondary);
-                        background-clip: text;
-                        -webkit-background-clip: text;
-                        color: transparent;
-                        transition: all 1s ease-in-out;
-                        transform: translate(0.4px, 6px) scale(0);
-                    }
-
-                    &:hover>.far {
-                        opacity: 0;
-                    }
-
-                    &:hover>.fas {
-                        transform: translate(0.4px, 0) scale(1);
-                    }
-
+                    font-size: 22px;
+                    background-image: linear-gradient($primary, $secondary);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    transition: all 1s ease-in-out;
+                    transform: translate(0.4px, 6px) scale(0);
                 }
+
+                &:hover>.far {
+                    opacity: 0;
+                }
+
+                &:hover>.fas {
+                    transform: translate(0.4px, 0) scale(1);
+                }
+
             }
+
 
         }
     }
@@ -222,101 +222,114 @@ body {
 
 //Style pour la version tablette
 @media screen and (min-width: 768px) {
-    
-body{
-    .top{
-        &__position {
 
-            .fas{
-                font-size: 24px;
-            }
-            h3{
-                font-size: 24px;
-            }
-        }
-        h2{
-            font-size: 26px;
-        }
-        p{
-            font-size: 20px;
-        }
-        .btn{
-            font-size: 20px;
-            width: initial;
-            padding: 20px;
-        }
-    }
-    .middle{
+    body {
+        .top {
+            &__position {
 
-        h2{
-            font-size: 26px;
-        }
-
-        &__rule{
-            width: 50%;
-
-            &--first{
-                align-self: flex-start;
-                margin-left: 30px;
-            }
-            &--third{
-                align-self: flex-end;
-                margin-right: 20px;
-            }
-            p{
-                font-size: 20px;
-            }
-            .fas{
-                font-size: 22px;
-            }
-            span{
-                font-size: 20px;
-            }
-        }    
-    }
-
-    .bottom{
-        flex-direction: initial;
-        flex-wrap: wrap;
-        justify-content:space-around;
-        padding: 30px 5px;
-
-        h2{
-            width: 100%;
-            font-size: 26px;
-        }
-        &__card{
-            width: 47%;
-            margin: 10px 5px;
-
-            span{
-                font-size: 20px;
-            }
-
-            &__container{
-                h3{
+                .fas {
                     font-size: 24px;
                 }
-                p{
+
+                h3 {
+                    font-size: 24px;
+                }
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .btn {
+                font-size: 20px;
+                width: initial;
+                padding: 20px;
+            }
+        }
+
+        .middle {
+
+            h2 {
+                font-size: 26px;
+            }
+
+            &__rule {
+                width: 50%;
+
+                &--first {
+                    align-self: flex-start;
+                    margin-left: 30px;
+                }
+
+                &--third {
+                    align-self: flex-end;
+                    margin-right: 20px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                .fas {
+                    font-size: 22px;
+                }
+
+                span {
                     font-size: 20px;
                 }
             }
-            .heart{
-                .fas{
+        }
+
+        .bottom {
+            flex-direction: initial;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 30px 5px;
+
+            h2 {
+                width: 100%;
+                font-size: 26px;
+            }
+
+            &__card {
+                width: 47%;
+                margin: 10px 5px;
+
+                span {
+                    font-size: 20px;
+                }
+
+                &__container {
+                    h3 {
+                        font-size: 24px;
+                    }
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+
+                .fas {
                     font-size: 28px;
                 }
-                .far{
+
+                .far {
                     font-size: 28px;
                 }
+
             }
         }
     }
-}
 
 }
+
 @media screen and (min-width: 992px) {
 
-    .middle{
+    .middle {
         margin: 0 20px;
     }
 
@@ -324,10 +337,10 @@ body{
 
 //Style pour la version desktop
 @media screen and (min-width: 1304px) {
-    .home{
+    .home {
 
         background-size: 500%;
-        background-image: linear-gradient(45deg, $secondary, $tertiary );
+        background-image: linear-gradient(45deg, $secondary, $tertiary);
         animation: bg-animation 5s infinite alternate-reverse;
         display: flex;
         // align-items: center;
@@ -335,16 +348,18 @@ body{
         flex-wrap: wrap;
         justify-content: center;
 
-        .top{
+        .top {
             width: 48%;
             border-radius: 30px;
             justify-content: space-between;
             margin-right: 10px;
-            &__position{
+
+            &__position {
                 border-radius: 30px 30px 0 0;
             }
-        } 
-        .middle{
+        }
+
+        .middle {
             border-radius: 30px;
             width: 48%;
             min-width: 600px;
@@ -352,28 +367,13 @@ body{
             padding: 5px 0;
             margin-left: 10px;
         }
-        .bottom{
+
+        .bottom {
             margin: 20px;
             width: 50%;
             border-radius: 30px;
             padding: 5px;
         }
-        // .bottom{
-        //     margin: 20px;
-        //     // width: 50%;
-        //     flex-wrap: nowrap;
-        //     border-radius: 30px;
-        //     position: relative;
-        //     width: 100%;
-        //     &__card{
-        //         margin: 40px 10px 10px 10px;
-        //     }
 
-        //     h2{
-        //         position: absolute;
-        //         top: 10px;
-        //         left: 10px;
-        //     }
-        // }
     }
 }
