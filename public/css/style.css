@@ -642,7 +642,7 @@ body .bottom__card__container .heart:hover > .fas {
     flex-direction: column;
     align-items: center;
     background-size: 500%;
-    background-image: linear-gradient(45deg, #99E2D0, #FF79DA, #99E2D0);
+    background-image: linear-gradient(45deg, #FF79DA, #99E2D0);
     animation: bg-animation 5s infinite alternate-reverse linear;
   }
   .restaurant img {
