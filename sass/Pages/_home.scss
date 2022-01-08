@@ -326,7 +326,7 @@ body{
     .home{
 
         background-size: 500%;
-        background-image: linear-gradient(45deg, $primary, $secondary , $tertiary );
+        background-image: linear-gradient(45deg, $secondary, $tertiary );
         animation: bg-animation 5s infinite alternate-reverse;
         display: flex;
         // align-items: center;
