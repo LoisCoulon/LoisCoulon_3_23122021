@@ -66,7 +66,7 @@
             .meal {
                 @include card-content();
 
-                &:hover > .meal__check {
+                &:hover>.meal__check {
                     margin-right: 0;
 
                     .fas {
@@ -156,90 +156,96 @@
 //Style pour la version tablette
 @media screen and (min-width: 768px) {
 
-    .restaurant{
+    .restaurant {
         display: flex;
         flex-direction: column;
         align-items: center;
         background-size: 500%;
-        background-image: linear-gradient(45deg, $secondary , $tertiary );
+        background-image: linear-gradient(45deg, $secondary, $tertiary);
         animation: bg-animation 5s infinite alternate-reverse linear;
 
-        img{
+        img {
             width: 70%;
             border-radius: 30px;
             margin-top: 20px;
         }
 
-        .menu{
+        .menu {
             width: 70%;
             border-radius: 30px;
             margin-bottom: 30px;
 
-            &__title{
+            &__title {
                 margin: 30px 30px 15px 25px;
-                h2{
+
+                h2 {
                     font-size: 30px;
                 }
-                .heart{
+
+                .heart {
                     right: 30px;
-                    .fas{
+
+                    .fas {
                         font-size: 30px;
                     }
-                    .far{
+
+                    .far {
                         font-size: 30px;
                     }
                 }
             }
 
-            &__category{
+            &__category {
 
                 margin: 20px 40px;
 
-                h3{
+                h3 {
                     font-size: 26px;
                 }
 
-                .meal{
-                    
-                    h4{
+                .meal {
+
+                    h4 {
                         font-size: 22px;
                     }
-                    p{
+
+                    p {
                         font-size: 18px;
                     }
 
-                    &__price{
+                    &__price {
                         font-size: 22px;
                     }
                 }
-                
+
             }
 
-            .btn{
+            .btn {
                 font-size: 24px;
             }
         }
     }
 
-    
+
 }
 
 //Style pour la version desktop
 @media screen and (min-width: 992px) {
 
-    .restaurant{
-        img{
+    .restaurant {
+        img {
             width: 60%;
-            
+
         }
-        .menu{
+
+        .menu {
             width: 60%;
-    
-            &__category{
+
+            &__category {
                 margin: 20px 80px;
             }
         }
 
     }
-   
+
 }
