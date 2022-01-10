@@ -136,6 +136,12 @@ footer ul li a {
     font-size: 18px;
   }
 }
+@media screen and (min-width: 992px) {
+  footer ul {
+    flex-direction: initial;
+    justify-content: space-evenly;
+  }
+}
 body .spin::before {
   padding: 20px;
   animation: 1.2s linear spinner both;
@@ -424,6 +430,10 @@ body .bottom__card__container .far:hover + .fas {
     flex-wrap: wrap;
     justify-content: center;
   }
+  .home .spin::before {
+    border: solid 6px whitesmoke;
+    border-bottom-color: #9356DC;
+  }
   .home .top {
     width: 48%;
     border-radius: 30px;
@@ -695,6 +705,9 @@ body .bottom__card__container .far:hover + .fas {
   }
   .restaurant .menu__category {
     margin: 20px 80px;
+  }
+  .restaurant .menu .btn {
+    width: auto;
   }
 }
 
