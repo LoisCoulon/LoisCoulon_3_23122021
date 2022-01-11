@@ -64,5 +64,12 @@ footer {
 
 //Style pour la version desktop
 @media screen and (min-width: 992px) {
+
+    footer{
+        ul{
+            flex-direction: initial;
+            justify-content: space-evenly;
+        }
+    }
     
 }
